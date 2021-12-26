@@ -154,7 +154,7 @@ function stopCountdown()
     counting = false;
     clearInterval(interval);
     interval = null;
-    document.getElementById("resetcountdown").style.display = "none";
+    document.getElementById("resetcountdown").style.display = "inline";
     document.getElementById("stopcountdown").style.display  = "none";
     document.getElementById("startcountdown").style.display = "inline";
     
