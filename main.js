@@ -2,7 +2,10 @@
 function pomodoro()
 {
     document.getElementById("body").style.backgroundColor = "tomato";
-
+    
+    clearActive();
+    document.getElementById("pomobtn").className +=  " active";
+    
     var startsWith = "bg";
     var classes = document.getElementById("pomobtn").className.split(" ").filter(function(v) {
         return v.lastIndexOf(startsWith, 0) !== 0;
@@ -26,6 +29,10 @@ function pomodoro()
 function shortBreak()
 {
     document.getElementById("body").style.backgroundColor = "#99ffff";
+
+    clearActive();
+    document.getElementById("shortbtn").className +=  " active";
+    
     var startsWith = "bg";
     var classes = document.getElementById("pomobtn").className.split(" ").filter(function(v) {
         return v.lastIndexOf(startsWith, 0) !== 0;
@@ -51,6 +58,10 @@ function shortBreak()
 function longBreak()
 {
     document.getElementById("body").style.background = "#3385ff";
+
+    clearActive();
+    document.getElementById("longbtn").className +=  " active";
+    
     var startsWith = "bg";
     var classes = document.getElementById("pomobtn").className.split(" ").filter(function(v) {
         return v.lastIndexOf(startsWith, 0) !== 0;
@@ -197,4 +208,11 @@ function endCountdown()
         type = "pomodoro"
         pomodoro();
     }
+}
+
+function clearActive()
+{
+    document.getElementById("pomobtn").className= document.getElementById("pomobtn").className.replace("active","");
+    document.getElementById("shortbtn").className= document.getElementById("shortbtn").className.replace("active","");
+    document.getElementById("longbtn").className = document.getElementById("longbtn").className.replace("active","");
 }
