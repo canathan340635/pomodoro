@@ -167,12 +167,24 @@ function endCountdown()
     {
         type = "shortBreak"
         pomodoroCounter++;
+        document.getElementById("pomodoroCount").innerHTML = "#" + (pomodoroCounter ) + "/4";
         shortBreak();
     }
     else if (type == "pomodoro" && pomodoroCounter == 4)
     {
         type = "longBreak"
-        pomodoroCounter = 0;
+        pomodoroCounter = 1;
+        document.getElementById("pomodoroCount").innerHTML = "#" + (pomodoroCounter ) + "/4";
+        totalCycles ++;
+        if (totalCycles == 1)
+        {
+            document.getElementById("totalCycles").innerHTML = "Completed 1 cycle.";
+        }
+        else
+        {
+            document.getElementById("totalCycles").innerHTML = "Completed " + totalCycles  + " cycles."; 
+        }
+
         longBreak();
     }
     else if (type == "shortBreak")

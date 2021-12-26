@@ -30,12 +30,15 @@
                 </div>
             </div>
             </div>
-
         </div>
+        <br><hr>
+        <h1 style="text-align: center;" id="pomodoroCount">#1/4 </h1>
+        <h1 style="text-align: center;" id="totalCycles"> Haven't completed a cycle yet. Keep on working!</h1>
         
         <script>
             let buttonAudio = new Audio("buttonClick.mp3");
-            let pomodoroCounter = 0;
+            let pomodoroCounter = 1;
+            let totalCycles = 0;
             let type = "pomodoro";
             let interval;
             let timerMinutes  = 30;
