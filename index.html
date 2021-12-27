@@ -14,9 +14,9 @@
         <div class="container mt-3" >
             <div class="row" >
                 <div class="btn-group btn-group-lg">
-                    <button id="pomobtn" onclick="buttonAudio.play();pomodoro()" type="button" class="btn btn-outline-dark bg-danger active">Pomodoro</button>
-                    <button id="shortbtn" onclick="buttonAudio.play();shortBreak()" type="button" class="btn btn-outline-dark bg-danger">Short Break</button>
-                    <button id="longbtn" onclick="buttonAudio.play();longBreak()" type="button" class="btn btn-outline-dark bg-danger">Long Break</button>
+                    <button id="pomobtn" onclick="playButtonSound();pomodoro()" type="button" class="btn btn-outline-dark bg-danger active">Pomodoro</button>
+                    <button id="shortbtn" onclick="playButtonSound();shortBreak()" type="button" class="btn btn-outline-dark bg-danger">Short Break</button>
+                    <button id="longbtn" onclick="playButtonSound();longBreak()" type="button" class="btn btn-outline-dark bg-danger">Long Break</button>
                 </div>
             </div>
             <div class="row text-center">
@@ -24,13 +24,13 @@
             </div>
             <div class="row">
                 <div class="btn-group btn-group-lg">
-                    <button id="startcountdown"  onclick="buttonAudio.play();countdown()" type="button" class="btn btn-outline-danger bg-dark text-danger">
+                    <button id="startcountdown"  onclick="playButtonSound();countdown()" type="button" class="btn btn-outline-danger bg-dark text-danger">
                         <h1><i class="bi bi-clock"></i> Start</h1></button>
-                    <button id="stopcountdown" onclick="buttonAudio.play();stopCountdown()" style="display: none;" type="button" class="btn btn-outline-danger bg-dark text-danger">
+                    <button id="stopcountdown" onclick="playButtonSound();stopCountdown()" style="display: none;" type="button" class="btn btn-outline-danger bg-dark text-danger">
                         <h1><i class="bi bi-stop"></i> Stop</h1></button>
-                    <button id="resetcountdown" onclick="buttonAudio.play();resetCountdown()" style="display: none;" type="button" class="btn btn-outline-danger bg-dark text-danger">
+                    <button id="resetcountdown" onclick="playButtonSound();resetCountdown()" style="display: none;" type="button" class="btn btn-outline-danger bg-dark text-danger">
                         <h1><i class="bi bi-arrow-counterclockwise"></i> Reset</h1></button>
-                    <button id="endcountdown" onclick="buttonAudio.play();endCountdown()" style="display: none;" type="button" class="btn btn-outline-danger bg-dark text-danger">
+                    <button id="endcountdown" onclick="playButtonSound();endCountdown()" style="display: none;" type="button" class="btn btn-outline-danger bg-dark text-danger">
                         <h1><i class="bi bi-skip-end"></i> End</h1></button>
                 </div>
             </div>
@@ -41,7 +41,6 @@
         <h1 style="text-align: center;" id="totalCycles"> Haven't completed a cycle yet. Keep on working!</h1>
         
         <script>
-            let buttonAudio = new Audio("buttonClick.mp3");
             let pomodoroCounter = 1;
             let totalCycles = 0;
             let type = "pomodoro";

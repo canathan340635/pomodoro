@@ -216,3 +216,8 @@ function clearActive()
     document.getElementById("shortbtn").className= document.getElementById("shortbtn").className.replace("active","");
     document.getElementById("longbtn").className = document.getElementById("longbtn").className.replace("active","");
 }
+function playButtonSound()
+{
+    var buttonAudio = new Audio("buttonClick.mp3");
+    buttonAudio.play();
+}
