@@ -32,7 +32,7 @@
                         <h1><i class="bi bi-stop"></i> Stop</h1></button>
                     <button id="resetcountdown" onclick="playButtonSound();resetCountdown()" style="display: none;" type="button" class="btn btn-outline-danger bg-dark text-danger">
                         <h1><i class="bi bi-arrow-counterclockwise"></i> Reset</h1></button>
-                    <button id="endcountdown" onclick="playButtonSound();endCountdown()" style="display: none;" type="button" class="btn btn-outline-danger bg-dark text-danger">
+                    <button id="endcountdown" onclick="playButtonSound();endCountdown('manual')" style="display: none;" type="button" class="btn btn-outline-danger bg-dark text-danger">
                         <h1><i class="bi bi-skip-end"></i> End</h1></button>
                 </div>
             </div>
@@ -46,7 +46,8 @@
             let pomodoroCounter = 1;
             let totalCycles = 0;
             let type = "pomodoro";
-            const pomodoroTimer = 15;
+            const pomodoroTimer = 25;
+            const seconds = 0;
             const shortBreakTimer = 5;
             const longBreakTimer = 15;
             let interval;

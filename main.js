@@ -88,20 +88,20 @@ function setTimer(timerType)
     if (timerType == "pomodoro")
     {
         timerMinutes = pomodoroTimer;
-        timerSecond = 0;
+        timerSecond = seconds;
         type = "pomodoro";
 
     }
     else if (timerType == "shortBreak")
     {
         timerMinutes = shortBreakTimer;
-        timerSecond = 0;
+        timerSecond = seconds;
         type = "shortBreak";
     }
     else if (timerType == "longBreak")
     {
         timerMinutes = longBreakTimer;
-        timerSecond = 0;
+        timerSecond = seconds;
         type = "longBreak";
     }
 
@@ -140,7 +140,7 @@ function countdown()
             timerLeft = dend - new Date();
             if (timerLeft <= 0)
             {
-                endCountdown();
+                endCountdown("auto");
             }
             document.getElementById("timerDisplay").innerHTML =millisToMinutesAndSeconds(timerLeft);
         },1000);
@@ -170,10 +170,13 @@ function stopCountdown()
     document.getElementById("startcountdown").style.display = "inline";
     
 }
-function endCountdown()
-{
-    audio =  new Audio("alarm1.mp3");
-    audio.play();
+function endCountdown(text)
+{   
+    if(text == "auto")
+    {
+        audio.play();
+    }
+
     if (type == "pomodoro" && pomodoroCounter!=4)
     {
         type = "shortBreak"
