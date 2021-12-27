@@ -46,14 +46,18 @@
             let pomodoroCounter = 1;
             let totalCycles = 0;
             let type = "pomodoro";
+            const pomodoroTimer = 15;
+            const shortBreakTimer = 5;
+            const longBreakTimer = 15;
             let interval;
-            let timerMinutes  = 30;
+            let timerMinutes  = pomodoroTimer;
             let timerSecond = 0;
             let timer = timerMinutes * 60000 + timerSecond * 1000; // miliseconds
             let timerLeft = timer;
             let counting = false;
+            let buttonAudio = new Audio("buttonClick.mp3");
+            let audio = new Audio("alarm1.mp3");
             pomodoro();
-            var buttonAudio = new Audio("buttonClick.mp3");
         </script>
     </body>
 </html>

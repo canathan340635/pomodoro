@@ -87,20 +87,20 @@ function setTimer(timerType)
 {
     if (timerType == "pomodoro")
     {
-        timerMinutes = 30;
+        timerMinutes = pomodoroTimer;
         timerSecond = 0;
         type = "pomodoro";
 
     }
     else if (timerType == "shortBreak")
     {
-        timerMinutes = 5;
+        timerMinutes = shortBreakTimer;
         timerSecond = 0;
         type = "shortBreak";
     }
     else if (timerType == "longBreak")
     {
-        timerMinutes = 15;
+        timerMinutes = longBreakTimer;
         timerSecond = 0;
         type = "longBreak";
     }
@@ -172,7 +172,7 @@ function stopCountdown()
 }
 function endCountdown()
 {
-    var audio = new Audio("alarm1.mp3");
+    audio =  new Audio("alarm1.mp3");
     audio.play();
     if (type == "pomodoro" && pomodoroCounter!=4)
     {
@@ -218,6 +218,6 @@ function clearActive()
 }
 function playButtonSound()
 {
-    var buttonAudio = new Audio("buttonClick.mp3");
+    buttonAudio = new Audio("buttonClick.mp3");
     buttonAudio.play();
 }
