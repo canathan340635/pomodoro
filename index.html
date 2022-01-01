@@ -12,8 +12,9 @@
         <script src="main.js"></script>
     </head>
     <body id="body" style="background-color: tomato;">
-    
+        <!-- This is the container that contains all the button and the time displayer. -->
         <div class="container mt-3" >
+            <!--This row contains 3 buttons for 3 different states Pomodoro, Short Break, Long Break-->
             <div class="row" >
                 <div class="btn-group btn-group-lg">
                     <button id="pomobtn" onclick="playButtonSound();pomodoro()" type="button" class="btn btn-outline-dark bg-danger active">Pomodoro</button>
@@ -21,9 +22,11 @@
                     <button id="longbtn" onclick="playButtonSound();longBreak()" type="button" class="btn btn-outline-dark bg-danger">Long Break</button>
                 </div>
             </div>
+            <!--This row contains the time displayer.-->
             <div class="row text-center">
                 <h1 class="display-1" style="font-size: 1000%;" id="timerDisplay"></h1>
             </div>
+            <!--This row contains 4 buttons which are Time Functions such as Start, Stop, Restart and End.-->
             <div class="row">
                 <div class="btn-group btn-group-lg">
                     <button id="startcountdown"  onclick="playButtonSound();countdown()" type="button" class="btn btn-outline-danger bg-dark text-danger">
@@ -39,9 +42,12 @@
             </div>
         </div>
         <br><hr>
+        <!--Display some information about the users status.-->
         <h1 style="text-align: center;" id="pomodoroCount">#1/4 </h1>
         <h1 style="text-align: center;" id="totalCycles"> Haven't completed a cycle yet. Keep on working!</h1>
         
+        <!--This script initializes all the variables and loads the event sounds.-->
+        <!--This is also where you need to make changes when you want the change the timers for different states such as pomodoroTimer or LongBreakTimer.-->
         <script>
             let pomodoroCounter = 1;
             let totalCycles = 0;
